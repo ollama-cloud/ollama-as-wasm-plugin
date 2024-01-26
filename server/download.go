@@ -147,7 +147,8 @@ func (b *blobDownload) run(ctx context.Context, requestURL *url.URL, opts *Regis
 
 	file, err := os.OpenFile(b.Name+"-partial", os.O_CREATE|os.O_RDWR, 0o644)
 	if err != nil {
-		return err
+		b.err = err
+		return
 	}
 	defer file.Close()
 
@@ -188,26 +189,30 @@ func (b *blobDownload) run(ctx context.Context, requestURL *url.URL, opts *Regis
 	}
 
 	if err := g.Wait(); err != nil {
-		return err
+		b.err = err
+		return
 	}
 
 	// explicitly close the file so we can rename it
 	if err := file.Close(); err != nil {
-		return err
+		b.err = err
+		return
 	}
 
 	for i := range b.Parts {
 		if err := os.Remove(file.Name() + "-" + strconv.Itoa(i)); err != nil {
-			return err
+			b.err = err
+			return
 		}
 	}
 
 	if err := os.Rename(file.Name(), b.Name); err != nil {
-		return err
+		b.err = err
+		return
 	}
 
 	b.done = true
-	return nil
+	return
 }
 
 func (b *blobDownload) downloadChunk(ctx context.Context, requestURL *url.URL, w io.Writer, part *blobDownloadPart, opts *RegistryOptions) error {
