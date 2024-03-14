@@ -6,6 +6,9 @@ replace github.com/samyfodil/go-ollama-tau-sdk => ../go-ollama-tau-sdk
 
 toolchain go1.22.0
 
+replace github.com/samyfodil/go-ollama-tau-sdk => ../go-ollama-tau-sdk
+
+
 require (
 	github.com/containerd/console v1.0.3
 	github.com/d4l3k/go-bfloat16 v0.0.0-20211005043715-690c3bdd05f1
@@ -236,6 +239,58 @@ require (
 	gonum.org/v1/gonum v0.8.2 // indirect
 	gorgonia.org/vecf32 v0.9.0 // indirect
 	gorgonia.org/vecf64 v0.9.0 // indirect
+	github.com/polydawn/refmt v0.89.0 // indirect
+	github.com/prometheus/client_golang v1.18.0 // indirect
+	github.com/prometheus/client_model v0.6.0 // indirect
+	github.com/prometheus/common v0.47.0 // indirect
+	github.com/prometheus/procfs v0.12.0 // indirect
+	github.com/pterm/pterm v0.12.65 // indirect
+	github.com/quic-go/qpack v0.4.0 // indirect
+	github.com/quic-go/quic-go v0.41.0 // indirect
+	github.com/quic-go/webtransport-go v0.6.0 // indirect
+	github.com/raulk/go-watchdog v1.3.0 // indirect
+	github.com/rivo/uniseg v0.4.4 // indirect
+	github.com/rogpeppe/go-internal v1.11.0 // indirect
+	github.com/sergi/go-diff v1.2.0 // indirect
+	github.com/spaolacci/murmur3 v1.1.0 // indirect
+	github.com/spf13/afero v1.9.5 // indirect
+	github.com/taubyte/builder v0.2.2 // indirect
+	github.com/taubyte/domain-validation v1.0.1 // indirect
+	github.com/taubyte/go-interfaces v0.2.14 // indirect
+	github.com/taubyte/go-sdk v0.3.9 // indirect
+	github.com/taubyte/go-simple-container v0.4.5 // indirect
+	github.com/taubyte/go-simple-git v0.2.5 // indirect
+	github.com/taubyte/go-specs v0.10.8 // indirect
+	github.com/taubyte/http v0.10.5 // indirect
+	github.com/taubyte/p2p v0.11.1 // indirect
+	github.com/taubyte/utils v0.1.7 // indirect
+	github.com/taubyte/vm v1.0.5 // indirect
+	github.com/tetratelabs/wazero v1.6.0 // indirect
+	github.com/whyrusleeping/chunker v0.0.0-20181014151217-fe64bd25879f // indirect
+	github.com/whyrusleeping/go-keyspace v0.0.0-20160322163242-5b898ac5add1 // indirect
+	github.com/whyrusleeping/multiaddr-filter v0.0.0-20160516205228-e903e4adabd7 // indirect
+	github.com/x448/float16 v0.8.4 // indirect
+	github.com/xanzy/ssh-agent v0.3.1 // indirect
+	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
+	go.opencensus.io v0.24.0 // indirect
+	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.49.0 // indirect
+	go.opentelemetry.io/otel v1.24.0 // indirect
+	go.opentelemetry.io/otel/metric v1.24.0 // indirect
+	go.opentelemetry.io/otel/trace v1.24.0 // indirect
+	go.uber.org/dig v1.17.1 // indirect
+	go.uber.org/fx v1.20.1 // indirect
+	go.uber.org/mock v0.4.0 // indirect
+	go.uber.org/multierr v1.11.0 // indirect
+	go.uber.org/zap v1.27.0 // indirect
+	golang.org/x/mod v0.15.0 // indirect
+	golang.org/x/oauth2 v0.16.0 // indirect
+	golang.org/x/tools v0.18.0 // indirect
+	gonum.org/v1/gonum v0.14.0 // indirect
+	google.golang.org/appengine v1.6.8 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20240108191215-35c7eff3a6b1 // indirect
+	google.golang.org/grpc v1.60.1 // indirect
+	gopkg.in/warnings.v0 v0.1.2 // indirect
+	lukechampine.com/blake3 v1.2.1 // indirect
 )
 
 require (
@@ -274,5 +329,12 @@ require (
 	golang.org/x/term v0.13.0
 	golang.org/x/text v0.13.0 // indirect
 	google.golang.org/protobuf v1.30.0
+	golang.org/x/crypto v0.19.0
+	golang.org/x/exp v0.0.0-20240213143201-ec583247a57a
+	golang.org/x/net v0.21.0 // indirect
+	golang.org/x/sys v0.17.0
+	golang.org/x/term v0.17.0
+	golang.org/x/text v0.14.0 // indirect
+	google.golang.org/protobuf v1.32.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
