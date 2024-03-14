@@ -4,8 +4,6 @@ go 1.22
 
 toolchain go1.22.0
 
-replace github.com/samyfodil/go-ollama-tau-sdk => ../go-ollama-tau-sdk
-
 require (
 	github.com/containerd/console v1.0.3
 	github.com/d4l3k/go-bfloat16 v0.0.0-20211005043715-690c3bdd05f1
@@ -15,16 +13,17 @@ require (
 	github.com/google/uuid v1.5.0
 	github.com/mitchellh/mapstructure v1.5.0
 	github.com/olekukonko/tablewriter v0.0.5
+	github.com/samyfodil/go-ollama-tau-sdk v0.1.0
 	github.com/spf13/cobra v1.7.0
 	github.com/stretchr/testify v1.8.4
 	github.com/x448/float16 v0.8.4
 	golang.org/x/sync v0.6.0
+
 )
 
 require (
 	github.com/fxamacker/cbor/v2 v2.6.0
 	github.com/pdevine/tensor v0.0.0-20240228013915-64ccaa8d9ca9
-	github.com/samyfodil/go-ollama-tau-sdk v0.0.0-00010101000000-000000000000
 	github.com/taubyte/vm-orbit v1.0.2
 	gotest.tools/v3 v3.5.1
 )
