@@ -46,7 +46,7 @@ func (s *ollama) load(model *server.Model, opts api.Options, sessionDuration tim
 			loaded.Options = nil
 		}
 
-		llmRunner, err := llm.New(s.workdir, model.ModelPath, model.AdapterPaths, model.ProjectorPaths, opts)
+		llmRunner, err := llm.New(model.ModelPath, model.AdapterPaths, model.ProjectorPaths, opts)
 		if err != nil {
 			// some older models are not compatible with newer versions of llama.cpp
 			// show a generalized compatibility error until there is a better way to

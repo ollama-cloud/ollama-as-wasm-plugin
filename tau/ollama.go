@@ -36,6 +36,9 @@ func new(ctx context.Context, workdir string) *ollama {
 		workdir:      workdir,
 	}
 	s.ctx, s.ctxC = context.WithCancel(ctx)
+
+	os.Setenv("OLLAMA_MODELS", workdir)
+
 	return s
 }
 
@@ -84,11 +87,11 @@ func (s *ollama) init() error {
 		// if loaded.runner != nil {
 		// 	loaded.runner.Close()
 		// }
-		os.RemoveAll(s.workdir)
+		// os.RemoveAll(s.workdir)
 		os.Exit(0)
 	}()
 
-	if err := llm.Init(s.workdir); err != nil {
+	if err := llm.Init(); err != nil {
 		return fmt.Errorf("unable to initialize llm library %w", err)
 	}
 	if runtime.GOOS == "linux" { // TODO - windows too

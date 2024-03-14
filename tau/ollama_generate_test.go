@@ -42,11 +42,11 @@ func TestGenerate(t *testing.T) {
 	module, err := testingSuite.WasmModule(wasmPath)
 	assert.NilError(t, err)
 
-	fmt.Println(time.Now())
+	now := time.Now()
 	// call our function "helloWorld" from our wasm module
 	_, err = module.Call(ctx, "generate")
 	assert.NilError(t, err)
-	fmt.Println(time.Now())
+	fmt.Println("took=", time.Since(now))
 
 	// Prints stdOut and stdErr from our runtime
 	// Expected output hello world!
